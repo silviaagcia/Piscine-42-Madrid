@@ -6,7 +6,7 @@
 /*   By: siangulo <siangulo@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:39:45 by siangulo          #+#    #+#             */
-/*   Updated: 2022/11/19 14:46:57 by siangulo         ###   ########.fr       */
+/*   Updated: 2022/11/21 15:56:28 by siangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	if (to_find[0] == '\0')
-		return (0);
+		return (str);
 	while (str[i] != '\0')
 	{
 		j = 0;

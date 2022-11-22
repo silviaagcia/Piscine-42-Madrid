@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: siangulo <siangulo@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 19:36:12 by siangulo          #+#    #+#             */
-/*   Updated: 2022/11/21 15:50:08 by siangulo         ###   ########.fr       */
+/*   Created: 2022/11/19 17:50:28 by siangulo          #+#    #+#             */
+/*   Updated: 2022/11/21 17:03:28 by siangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+	while (str[i] != '\0')
+	{	
 		i++;
 	}
-	return (0);
+	return (i);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "";
-	char	s2[] = "abg";
-	unsigned int n = 1;
-	printf("%d", ft_strncmp(s1, s2, n));
-	return (0);
-}*/

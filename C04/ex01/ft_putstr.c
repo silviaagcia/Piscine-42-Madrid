@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: siangulo <siangulo@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 19:36:12 by siangulo          #+#    #+#             */
-/*   Updated: 2022/11/21 15:50:08 by siangulo         ###   ########.fr       */
+/*   Created: 2022/11/19 17:55:37 by siangulo          #+#    #+#             */
+/*   Updated: 2022/11/21 17:09:21 by siangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putstr(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && (i < n))
+	while (str[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		write(1, &str[i], 1);
 		i++;
 	}
-	return (0);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "";
-	char	s2[] = "abg";
-	unsigned int n = 1;
-	printf("%d", ft_strncmp(s1, s2, n));
+	char str[] = "hola";
+	ft_putstr(str);
 	return (0);
-}*/
+}
+*/
